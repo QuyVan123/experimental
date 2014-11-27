@@ -11,7 +11,6 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+
+Route::any('/', 'ExperimentController@index');
+Route::any('/{uri}', 'ExperimentController@display');
